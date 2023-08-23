@@ -2,6 +2,7 @@
 :root {
     --mainColor: #65DAF9;
 }
+
 /* Gerais */
 body {
     font-family: 'Roboto', sans-serif;
@@ -73,6 +74,7 @@ header,
     font-size: 50px;
     margin-bottom: 30px;
 }
+
 #mainSlider .carousel-caption p {
     font-size: 22px;
     font-weight: 300;
@@ -115,6 +117,7 @@ header,
     font-size: 40px;
     text-align: center;
 }
+
 /* Sublinhado feito com pseudo elemento */
 .main-title::after {
     content: "";
@@ -145,6 +148,7 @@ header,
     color: var(--mainColor);
     margin-right: 15px;
 }
+
 /* Serviços */
 
 .service-box {
@@ -152,7 +156,8 @@ header,
     margin-bottom: 50px;
 }
 
-.service-box i, .service-box h4 {
+.service-box i,
+.service-box h4 {
     transition: .5s;
 }
 
@@ -167,7 +172,8 @@ header,
     margin-bottom: 20px;
 }
 
-.service-box:hover > i, .service-box:hover > h4 {
+.service-box:hover>i,
+.service-box:hover>h4 {
     color: var(--mainColor);
 }
 
@@ -205,7 +211,8 @@ header,
     height: 500px;
 }
 
-#apply-area .container-fluid, #apply-area .row {
+#apply-area .container-fluid,
+#apply-area .row {
     height: 100%;
 }
 
@@ -220,8 +227,9 @@ header,
     height: 100%;
 }
 
-#pattern-img h4, #pattern-img p {
-    color:#FFF;
+#pattern-img h4,
+#pattern-img p {
+    color: #FFF;
 }
 
 #pattern-img h4 {
@@ -274,7 +282,8 @@ header,
     padding: 0px 20px;
 }
 
-#portfolio-area .filter-btn.active, #portfolio-area .filter-btn:hover {
+#portfolio-area .filter-btn.active,
+#portfolio-area .filter-btn:hover {
     color: #FFF;
     background-color: var(--mainColor);
     border-color: var(--mainColor);
@@ -371,11 +380,12 @@ header,
     margin-bottom: 50px;
     border-bottom: 1px solid #3EC1D5;
 }
+
 .contact-box i {
     color: #444;
     border: solid 1px #444;
     border-radius: 50%;
-    width:55px;
+    width: 55px;
     height: 55px;
     line-height: 55px;
     font-size: 24px;
@@ -395,7 +405,9 @@ header,
     font-size: 22px;
 }
 
-#contact-form input[type="text"], #contact-form input[type="email"], #contact-form textarea {
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
     margin-bottom: 15px;
     border-radius: 0;
 }
@@ -420,7 +432,7 @@ header,
     text-align: center;
 }
 
-#copy-area .container p{
+#copy-area .container p {
     margin-bottom: 0;
 }
 
@@ -432,4 +444,176 @@ header,
 #copy-area .container a:hover {
     text-decoration: none;
     color: #3EC1D5;
+}
+
+/* responsive */
+@media(max-width: 768px) {
+
+    /* geral */
+    .container {
+        padding: 20px 0;
+    }
+
+    /* slider */
+    #mainSlider .carousel-inner,
+    #mainSlider .corousel-item {
+        height: auto;
+    }
+
+    #mainSlider .carousel-caption h2 {
+        font-size: 28px;
+    }
+
+    #mainSlider .carousel-caption p {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    .carousel-caption {
+        left: 10%;
+        right: 10%;
+    }
+
+    /* About */
+    #about-area img {
+        margin-top: 100px;
+    }
+
+    /* data */
+    .circle-box div {
+        padding: 0 10px;
+    }
+
+    #data-area p {
+        font-size: 16px;
+    }
+
+    /* team */
+    .card-title {
+        font-size: 14px;
+    }
+
+    .card-text {
+        font-size: 12px;
+    }
+
+    /* apply */
+    #apply-area .apply-box {
+        padding: 50px 25px;
+    }
+
+    /* news */
+    #news-area p {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #email-input {
+        width: 70%;
+    }
+
+    #call-area {
+        margin-top: 30px;
+    }
+
+    #call-area .container {
+        padding: 30px;
+    }
+
+    #call-area p,
+    #call-area #call-btn {
+        font-size: 16px;
+    }
+}
+
+@media(max-width:425px) {
+
+    /* slider */
+    #mainSlider {
+        margin-top: 90px;
+    }
+
+    #mainSlider .carousel-caption {
+        top: 5%;
+    }
+
+    #mainSlider .carousel-caption h2 {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    #manSlider .carousel-caption p {
+        display: none;
+    }
+
+    .carousel-caption .main-btn {
+        font-size: 14px;
+    }
+
+    /* about */
+    .main-title {
+        font-size: 30px;
+    }
+
+    #about-area img {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }
+
+    /* data */
+    .circle-box {
+        width: 50%;
+    }
+
+    /* team */
+    #team-area .col-md-3 {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+
+    /* apply */
+    #apply-area {
+        height: auto;
+    }
+
+    #company-img {
+        display: none;
+    } 
+
+    /* filter */
+    #portfolio-area .filter-btn {
+        margin-bottom: 20px;
+    }
+    .project-box {
+        width: 50%;
+    }
+
+    /* news */
+    #news-area .main-title {
+        font-size: 24px;
+    }
+
+    #news-area p {
+        font-size: 16px;
+    }
+
+    #email-input {
+        width: 80%;
+    }
+
+    /* cta */
+
+    #call-area p, #call-area #call-btn {
+        font-size: 14px;
+        letter-spacing: 0;
+        margin: 0;
+        width: 50%;
+    }
+
+    /* contact */
+    .contact-box {
+        border: none;
+        margin-bottom: 0;
+    }
 }
