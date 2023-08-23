@@ -1,3 +1,8 @@
+/* Global variables */
+:root {
+    --mainColor: #65DAF9;
+}
+
 /* Gerais */
 body {
     font-family: 'Roboto', sans-serif;
@@ -18,9 +23,10 @@ li {
 }
 
 /* Barra de navegação */
+
 header,
 .navbar {
-    background-color: #353D41;
+    background-color: #343D41;
 }
 
 #nav-container {
@@ -49,18 +55,13 @@ header,
     padding: 1rem .8rem;
 }
 
-.nav-item.active {
-    border-bottom: 3px solid #FFF;
-}
-
 /* Slider */
 
 .container-fluid {
     padding: 0;
 }
 
-#mainSlider .carousel-inner,
-#mainSlider .carousel-item {
+#mainSlider .carousel-inner, #mainSlider .carousel-item {
     height: 90vh;
 }
 
@@ -81,7 +82,7 @@ header,
 }
 
 .main-btn {
-    background-color: #65DAF9;
+    background-color: var(--mainColor);
     color: #FFF;
     text-transform: uppercase;
     width: 200px;
@@ -96,11 +97,11 @@ header,
     text-decoration: none;
     color: #FFF;
     background-color: transparent;
-    border-color: #3EC1D5;
+    border-color: var(--mainColor);
 }
 
 .carousel-indicators .active {
-    background-color: #65DAF9;
+    background-color: var(--mainColor)
 }
 
 /* Sobre a empresa */
@@ -116,6 +117,7 @@ header,
     text-align: center;
 }
 
+/* Sublinhado feito com pseudo elemento */
 .main-title::after {
     content: "";
     border-top: 2px solid #333;
@@ -142,7 +144,7 @@ header,
 }
 
 #about-list i {
-    color: #65DAF9;
+    color: var(--mainColor);
     margin-right: 15px;
 }
 
@@ -171,18 +173,22 @@ header,
 
 .service-box:hover>i,
 .service-box:hover>h4 {
-    color: #65DAF9;
+    color: var(--mainColor);
 }
 
 /* Dados */
 
-.circle-box div {
+.circles-box div {
     padding: 0 40px;
 }
 
 .progressbar-text {
-    font-weight: bold;
-    font-size: 32px;
+    font-size: bold;
+    font-weight: 32px;
+}
+
+#data-area {
+    font-size: 30px;
 }
 
 #data-area p {
@@ -210,8 +216,8 @@ header,
 }
 
 #apply-area .apply-box {
-    padding: 70px 50px;
     text-align: center;
+    padding: 75px 50px;
 }
 
 #company-img {
@@ -246,12 +252,12 @@ header,
     border-color: #FFF;
 }
 
-#apply-btn:hover {
-    border-color: #65DAF9;
-    background-color: #65DAF9;
+#appĺy-btn:hover {
+    border-color: var(--mainColor);
+    background-color: var(--mainColor);
 }
 
-/* Portfólio */
+/* Portifólio */
 
 .project-box {
     margin-bottom: 30px;
@@ -272,17 +278,17 @@ header,
     width: auto;
     height: 40px;
     line-height: 40px;
-    padding: 0 20px;
+    padding: 0px 20px;
 }
 
 #portfolio-area .filter-btn.active,
 #portfolio-area .filter-btn:hover {
     color: #FFF;
-    border: 1px solid #65DAF9;
-    background-color: #65DAF9;
+    background-color: var(--mainColor);
+    border-color: var(--mainColor);
 }
 
-/* News Letter */
+/* news letter */
 
 #news-area {
     text-align: center;
@@ -298,7 +304,7 @@ header,
     border-radius: 0;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    border: 1px solid #65DAF9;
+    border: 1px solid var(--mainColor);
     display: inline;
     box-sizing: border-box;
     width: 40%;
@@ -308,10 +314,10 @@ header,
 #news-btn {
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    border: 1px solid #65DAF9;
-    background-color: #65DAF9;
-    color: #FFF;
+    border: 1px solid var(--mainColor);
+    background-color: var(--mainColor);
     text-transform: uppercase;
+    color: #FFF;
     height: 40px;
     padding: 0 30px;
     margin-left: -130px;
@@ -321,13 +327,13 @@ header,
 
 #news-btn:hover {
     background-color: #FFF;
-    color: #65DAF9;
+    color: var(--mainColor);
 }
 
-/* Call To Action */
+/* Call to action */
 
 #call-area {
-    background-color: #65DAF9;
+    background-color: var(--mainColor);
     text-transform: uppercase;
 }
 
@@ -344,19 +350,20 @@ header,
     color: #FFF;
     font-weight: bold;
     font-size: 20px;
+    width: auto;
+    letter-spacing: 2px;
     margin-bottom: 0;
+    display: inline;
     height: 60px;
     line-height: 60px;
-    letter-spacing: 2px;
-    display: inline;
 }
 
 #call-area #call-btn {
     background-color: #FFF;
-    color: #65DAF9;
+    color: var(--mainColor);
     font-weight: bold;
-    margin-left: 30px;
     font-size: 20px;
+    margin-left: 30px;
     width: auto;
     letter-spacing: 2px;
 }
@@ -388,7 +395,7 @@ header,
     font-size: 16px;
 }
 
-.contact-tile {
+.contact-title {
     font-weight: bold;
     color: #3EC1D5;
 }
@@ -398,6 +405,7 @@ header,
 }
 
 #contact-form input[type="text"],
+#contact-form input[type="email"],
 #contact-form textarea {
     margin-bottom: 15px;
     border-radius: 0;
@@ -412,7 +420,7 @@ header,
     color: #3EC1D5;
 }
 
-/* Copy */
+/* copy */
 
 #copy-area {
     background-color: #F1F1F1;
@@ -446,8 +454,7 @@ header,
     }
 
     /* slider */
-    #mainSlider .carousel-inner,
-    #mainSlider .carousel-item {
+    #mainSlider .carousel-inner, #mainSlider .corousel-item {
         height: auto;
     }
 
@@ -465,7 +472,7 @@ header,
         right: 10%;
     }
 
-    /* about */
+    /* About */
     #about-area img {
         margin-top: 100px;
     }
@@ -516,11 +523,9 @@ header,
     #call-area #call-btn {
         font-size: 16px;
     }
-
 }
 
-
-@media(max-width: 425px) {
+@media(max-width:425px) {
 
     /* slider */
     #mainSlider {
@@ -536,12 +541,11 @@ header,
         margin-bottom: 40px;
     }
 
-    #mainSlider .carousel-caption p {
+    #manSlider .carousel-caption p {
         display: none;
     }
 
     .carousel-caption .main-btn {
-
         font-size: 14px;
     }
 
@@ -560,6 +564,7 @@ header,
         width: 50%;
     }
 
+    /* team */
     #team-area .col-md-3 {
         width: 50%;
         margin-bottom: 30px;
@@ -572,13 +577,12 @@ header,
 
     #company-img {
         display: none;
-    }
+    } 
 
     /* filter */
     #portfolio-area .filter-btn {
         margin-bottom: 20px;
     }
-
     .project-box {
         width: 50%;
     }
@@ -596,14 +600,11 @@ header,
         width: 80%;
     }
 
-    #call-area p,
-    #call-area #call-btn {
+    /* cta */
+
+    #call-area p, #call-area #call-btn {
         font-size: 14px;
         letter-spacing: 0;
-    }
-
-    #call-area p,
-    #call-area #call-btn {
         margin: 0;
         width: 50%;
     }
@@ -613,5 +614,4 @@ header,
         border: none;
         margin-bottom: 0;
     }
-
 }
