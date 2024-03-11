@@ -2,7 +2,27 @@
 :root {
     --mainColor: #65DAF9;
 }
+.whatsapp-container {
+    position: fixed;
+    bottom: 75px;
+    right: 100px;
+    z-index: 100000;
+}
 
+.floating {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.my-float {
+    margin-top: 16px;
+}
 /* Gerais */
 body {
     font-family: 'Roboto', sans-serif;
